@@ -12,18 +12,18 @@ Model Battleship as an **information acquisition problem** and empirically + the
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        UI Layer (Phase 6)                        │
+│                        UI Layer (Phase 6)                       │
 │   Streamlit app — board visualization, heatmaps, step-through   │
 └────────────────────────────┬────────────────────────────────────┘
                              │
 ┌────────────────────────────▼────────────────────────────────────┐
-│                     Analysis Layer (Phase 4)                     │
+│                     Analysis Layer (Phase 4)                    │
 │   stats.py — CI, hypothesis tests, distribution fitting         │
 │   visualization.py — histograms, boxplots, convergence curves   │
 └────────────────────────────┬────────────────────────────────────┘
                              │
 ┌────────────────────────────▼────────────────────────────────────┐
-│                  Simulation Framework (Phase 5)                  │
+│                  Simulation Framework (Phase 5)                 │
 │   runner.py — GameRunner (single + batch + parallel)            │
 │   experiment.py — versioned experiment runs, parameter sweeps   │
 └──────────┬───────────────────────────────────┬──────────────────┘
@@ -39,8 +39,8 @@ Model Battleship as an **information acquisition problem** and empirically + the
 └──────────┬──────────┘
            │ select_action(GameView)
 ┌──────────▼──────────────────────────────────────────────────────┐
-│                       Core Engine (Phase 1)  ✓                  │
-│                                                                  │
+│                       Core Engine (Phase 1)                     │
+│                                                                 │
 │   ships.py   — ShipType, Orientation, Ship                      │
 │   board.py   — Board (ship_grid + shot_grid), CellState         │
 │   game.py    — Game, ShotRecord, GameResult                     │
@@ -462,8 +462,8 @@ When a ship sinks, the posterior update is particularly powerful: the exact cell
 | Phase | Content | Status |
 |---|---|---|
 | 1 | Core engine (ships, board, game, strategy ABC, basic runner) | **Complete** |
-| 2 | Strategy implementations: Random, HuntTarget, Parity, Entropy | Planned |
-| 3 | Info-theory module: hypothesis space, probability maps, entropy | Planned |
-| 4 | Analysis layer: stats, CI, visualization | Planned |
-| 5 | Parallelization, experiment versioning, parameter sweeps | Planned |
-| 6 | Streamlit UI: board vis, heatmaps, step-through debugger | Planned |
+| 2 | Strategy implementations: Random, HuntTarget, Parity, Entropy | **Complete** |
+| 3 | Info-theory module: hypothesis space, probability maps, entropy | **Complete** |
+| 4 | Analysis layer: stats, CI, visualization | **Complete** |
+| 5 | Parallelization, experiment versioning, parameter sweeps | **Complete** |
+| 6 | Streamlit UI: board vis, heatmaps, step-through debugger | **Complete** |
